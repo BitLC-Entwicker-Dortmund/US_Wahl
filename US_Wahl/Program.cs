@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using US_Wahl.Model;
+using US_Wahl.View;
+using US_Wahl.Controller;
 
 namespace US_Wahl
 {
     class Program
     {
+        private static object anzahl = 500;
+        internal static List<Person> wahlvolk = ModelGenerator.ZeigeWahlvolk ();
+
         static void Main(string[] args)
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
+            Bildschirmausgabe.Menue (); 
             Console.ReadKey();
-
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }
     }
 }
